@@ -1,0 +1,1 @@
+<?php debugear($propiedades) ?>
