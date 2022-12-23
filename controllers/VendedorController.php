@@ -64,8 +64,12 @@ class VendedorController {
 
 
             if($id) {
-                    $vendedor = Vendedor::find($id);
-                    $vendedor->eliminar();
+                    $tipo = $_POST["tipo"];
+
+                    if(validarTipoContenido($tipo)){
+                        $vendedor = Vendedor::find($id);
+                        $vendedor->eliminar();
+                    }
                 }
 
         }
